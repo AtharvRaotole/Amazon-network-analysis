@@ -1,0 +1,36 @@
+{
+  "analysis_date": "2025-11-18 01:08:11",
+  "dataset": {
+    "nodes": 334863,
+    "edges": 925872,
+    "status": "FULL DATASET"
+  },
+  "results": {
+    "centrality": {
+      "pagerank": "Computed for all 334,863 nodes",
+      "degree": "Computed for all 334,863 nodes",
+      "location": "results/centrality/"
+    },
+    "communities": {
+      "louvain": "229 communities detected (modularity: 0.926)",
+      "location": "results/communities/"
+    },
+    "train_test_split": {
+      "train_edges": 740698,
+      "test_positive": 185174,
+      "test_negative": 185174
+    },
+    "spam_analysis": {
+      "experiment_id": "exp_20251118_010748",
+      "amplification": "27.32x PageRank boost",
+      "detection": "Precision: 0.029, Recall: 1.0, F1: 0.057",
+      "location": "results/spam_analysis/"
+    }
+  },
+  "performance": {
+    "total_time_seconds": 38.5,
+    "pagerank_time": 1.01,
+    "community_detection_time": 24.28,
+    "preprocessing_time": 5.51
+  }
+}
