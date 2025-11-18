@@ -564,14 +564,20 @@ def generate_link_prediction_report(
     """
     
     for method_name, metrics in all_results.items():
+        precision = f"{metrics.get('precision', 0):.4f}" if isinstance(metrics.get('precision'), (int, float)) else 'N/A'
+        recall = f"{metrics.get('recall', 0):.4f}" if isinstance(metrics.get('recall'), (int, float)) else 'N/A'
+        f1 = f"{metrics.get('f1', 0):.4f}" if isinstance(metrics.get('f1'), (int, float)) else 'N/A'
+        auc_roc = f"{metrics.get('auc_roc', 0):.4f}" if isinstance(metrics.get('auc_roc'), (int, float)) else 'N/A'
+        auc_pr = f"{metrics.get('auc_pr', 0):.4f}" if isinstance(metrics.get('auc_pr'), (int, float)) else 'N/A'
+        
         html_content += f"""
                 <tr>
                     <td>{method_name}</td>
-                    <td>{metrics.get('precision', 'N/A'):.4f if isinstance(metrics.get('precision'), (int, float)) else 'N/A'}</td>
-                    <td>{metrics.get('recall', 'N/A'):.4f if isinstance(metrics.get('recall'), (int, float)) else 'N/A'}</td>
-                    <td>{metrics.get('f1', 'N/A'):.4f if isinstance(metrics.get('f1'), (int, float)) else 'N/A'}</td>
-                    <td>{metrics.get('auc_roc', 'N/A'):.4f if isinstance(metrics.get('auc_roc'), (int, float)) else 'N/A'}</td>
-                    <td>{metrics.get('auc_pr', 'N/A'):.4f if isinstance(metrics.get('auc_pr'), (int, float)) else 'N/A'}</td>
+                    <td>{precision}</td>
+                    <td>{recall}</td>
+                    <td>{f1}</td>
+                    <td>{auc_roc}</td>
+                    <td>{auc_pr}</td>
                 </tr>
         """
     
