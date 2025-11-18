@@ -5,6 +5,7 @@ This module provides functions for evaluating community detection results
 against ground truth using various metrics including NMI, ARI, and modularity.
 """
 
+import os
 import logging
 import pandas as pd
 import numpy as np
