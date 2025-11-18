@@ -1,0 +1,20 @@
+{
+  "graph_stats": {
+    "nodes": 1000,
+    "edges": 4985
+  },
+  "centrality": {
+    "pagerank": 1000,
+    "degree": 1000,
+    "betweenness": 1000
+  },
+  "communities": {
+    "louvain": 2,
+    "label_propagation": 2,
+    "greedy_modularity": 2
+  },
+  "spam_analysis": {
+    "experiment_id": "exp_20251118_004338",
+    "spam_nodes": 1
+  }
+}
