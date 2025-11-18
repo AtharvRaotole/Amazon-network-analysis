@@ -2,8 +2,7 @@
 """
 Verification script for Amazon Co-Purchasing Network project setup.
 
-This script verifies that all required files exist and that all modules
-work correctly before proceeding to Module 2.
+This script verifies that all required files exist 
 """
 
 import os
